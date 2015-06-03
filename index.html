@@ -1,0 +1,16 @@
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="./lib/marked.js"></script>
+  <script>
+    $(document).on('keyup', '#md', function () {
+      $('#html').html(marked($('#md').val()));
+      $('#rawHTML').val(marked($('#md').val()));
+    });
+  </script>
+</head>
+<textarea style='border: 1px solid black;width: 400px;height: 200px;' id='md' value='yo'></textarea>
+
+<div id='html' style='border: 1px solid black;'>
+</div>
+
+<textarea id='rawHTML' style='border: 1px solid black;width: 400px;height: 200px;'></textarea>
